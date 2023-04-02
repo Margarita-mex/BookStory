@@ -6,6 +6,7 @@ from bookstory.models import Author, Book, Order
 class AuthorSerializer(ModelSerializer):
     class Meta:
         model = Author
+        fields = "__all__"
 
 
 class BookSerializer(ModelSerializer):
@@ -13,6 +14,7 @@ class BookSerializer(ModelSerializer):
 
     class Meta:
         model = Book
+        fields = "__all__"
 
 
 class OrderSerializer(ModelSerializer):
@@ -20,3 +22,4 @@ class OrderSerializer(ModelSerializer):
 
     class Meta:
         model = Order
+        fields = "__all__"
