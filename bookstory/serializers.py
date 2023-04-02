@@ -10,7 +10,7 @@ class AuthorSerializer(ModelSerializer):
 
 
 class BookSerializer(ModelSerializer):
-    author = AuthorSerializer(many=True, source='author_set')
+    author = AuthorSerializer(many=True, source='author_set', required=False)
 
     class Meta:
         model = Book
