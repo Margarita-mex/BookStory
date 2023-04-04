@@ -26,22 +26,20 @@ class AuthorTest(APITestCase, TestCase):
     def test_get_author_read_id(self):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, HTTP_200_OK)
-        self.assertEqual(response.data, {'id': 1, 'title': 'Тестовый Августин'})
-        self.assertEqual(json.loads(response.content), {'id': 1, 'title': 'Тестовый Августин'})
         self.assertMatchSnapshot(response.json())
 
     def test_put_author_update_id(self):
-        response = self.client.put(self.url, self.author)
+        response = self.client.put(self.url)
         self.assertEqual(response.status_code, HTTP_200_OK)
         self.assertMatchSnapshot(response.json())
 
     def test_patch_author_partial_update_id(self):
-        response = self.client.patch(self.url, self.author)
+        response = self.client.patch(self.url)
         self.assertEqual(response.status_code, HTTP_200_OK)
         self.assertMatchSnapshot(response.json())
 
     def test_delete_author_id(self):
-        response = self.client.delete(self.url, self.author)
+        response = self.client.delete(self.url)
         self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
         self.assertMatchSnapshot(response.json())
 

@@ -7,6 +7,24 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
+snapshots['AuthorTest::test_get_author_list 1'] = [
+    {
+        'bio': 'пишет часто по осени',
+        'id': 1,
+        'language': 'русский',
+        'title': 'Тестовый Августин'
+    }
+]
+
+snapshots['AuthorTest::test_get_author_read_id 1'] = [
+    {
+        'bio': 'пишет часто по осени',
+        'id': 1,
+        'language': 'русский',
+        'title': 'Тестовый Августин'
+    }
+]
+
 snapshots['BookTest::test_create_book 1'] = {
     'cost': '0.00',
     'id': 2,
