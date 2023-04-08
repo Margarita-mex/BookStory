@@ -16,14 +16,26 @@ snapshots['AuthorTest::test_get_author_list 1'] = [
     }
 ]
 
-snapshots['AuthorTest::test_get_author_read_id 1'] = [
-    {
-        'bio': 'пишет часто по осени',
-        'id': 1,
-        'language': 'русский',
-        'title': 'Тестовый Августин'
-    }
-]
+snapshots['AuthorTest::test_patch_author_partial_update_id 1'] = {
+    'bio': 'пишет часто по осени',
+    'id': 1,
+    'language': 'русский',
+    'title': 'Тестовый Августин'
+}
+
+snapshots['AuthorTest::test_post_author_create 1'] = {
+    'bio': 'пишет часто по осени',
+    'id': 2,
+    'language': 'русский',
+    'title': 'Тестовый Августин'
+}
+
+snapshots['AuthorTest::test_put_author_update_id 1'] = {
+    'bio': 'пишет часто по осени',
+    'id': 1,
+    'language': 'русский',
+    'title': 'Тестовый Августин'
+}
 
 snapshots['BookTest::test_create_book 1'] = {
     'cost': '0.00',
